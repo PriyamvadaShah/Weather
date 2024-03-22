@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(#d3c9c2, #657452);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 120%;
+  }
+  
+  .home, .searchh , .maps, .contact, .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #9e96b9;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-left: auto;
+  }
+  
+  .nav-bar{
+    width:100%;
+    height:7vh;
+    background-color: black;
+    opacity:0.8;
+    color:white;
+    justify-content :space-evenly;
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 0px;
+    position:fixed;
+    vertical-align: middle;
+    align-content:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 2em;
+    margin-right: auto;
+    width: calc(100% - 50px);
+  }
+  
+  .weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+
+  .link{
+    font-family:'Times New Roman', Times, serif;
+    padding-right: 0px;
+    margin-right:0px;
+    text-decoration: none;
+    color:white;
+  }
+
+  .weather.loading::after {
+    visibility: visible;
+    content: "Loading...";
+    color: aliceblue;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+  
+  .location {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .card{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .holder {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    margin-top:30vh;
+    display: flex;
+    flex-wrap:wrap;
+
+    justify-content: center;
+    align-items: center;
+  }
+  input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+  }
+  button:hover {
+    background: #7c7c7c6b;
+  }
+  
+  h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+  
+  .icon{
+    background: url(https://openweathermap.org/img/wn/04n.png) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .icon::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      background-image: "url('https://unsplash.com/photos/MF9Wy1NA55I')";
+    }
+    .search, .maps, .contact{
+        display: none;
+    }
+  }
+
+
+  .navbar {
+    height: 3em;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: #333;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    overflow: hidden;
+    align-items: center;
+    align-content:center;
+    vertical-align: middle;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+  }
+
+  .dropdown {
+    margin-right:0px;
+    overflow: hidden;
+  }
+
+ .dropbtn {
+    font-size: 16px;
+    color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 0px;
+    background-color: inherit;
+    margin-left: 0;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .link:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+
+
